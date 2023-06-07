@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[portuguese]{babel}
+\usepackage{amsmath,amsfonts}
+\usepackage{coqdoc}
+\usepackage{mathpartir,proof}
+\usepackage{minibox}
+\usepackage{tabto,calc}
+\usepackage{graphicx}
+\usepackage{fullpage}
+
+% \Def\figurename{Figura}
+\def\refname{Refer\^{e}ncias}
+\def\bibname{Refer\^{e}ncias}
+
+\newtheorem{teorema}{Teorema}
+\newtheorem{definicao}[teorema]{Definição}
+\newtheorem{exercicio}[teorema]{Exercício}
+\newtheorem{exemplo}[teorema]{Exemplo}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}[teorema]{Corolário}
+
+\newcommand{\nat}{\mathbb{N}}
+\newcommand{\tto}{\Longrightarrow}
+\newcommand{\toot}{\leftrightarrow}
+\newcommand{\rweak}{(R_w)}
+\newcommand{\ax}{\rm{(Ax)}}
+\newcommand{\refl}{\rm{(Refl)}}
+\newcommand{\lem}{\rm{(LEM)}}
+\newcommand{\mt}{\rm{(MT)}}
+\newcommand{\cp}{\rm{(CP)}}
+\newcommand{\lp}{\rm{(LP)}}
+\newcommand{\ror}{(R_\lor)}
+\newcommand{\rto}{(R_\to)}
+\newcommand{\lto}{(L_\to)}
+\newcommand{\rcont}{(R_c)}
+\newcommand{\toe}{(\to_e)}
+\newcommand{\toi}[1]{(\to_i)\;{#1}}
+\newcommand{\toisa}{\rm{(\to_i)}}
+\newcommand{\landi}{(\land_i)}
+\newcommand{\lande}{(\land_e)}
+\newcommand{\landel}{(\land_{e_1})}
+\newcommand{\lander}{(\land_{e_2})}
+\newcommand{\lori}{(\lor_i)}
+\newcommand{\lorl}{(\lor_{i_1})}
+\newcommand{\lorr}{(\lor_{i_2})}
+\newcommand{\lore}[2]{(\lor_e)\;{#1,#2}}
+\newcommand{\loresa}{\rm{(\lor_e)}}
+\newcommand{\nege}{(\neg_e)}
+\newcommand{\nne}{(\neg\neg_e)}
+\newcommand{\nni}{(\neg\neg_i)}
+\newcommand{\negi}[1]{(\neg_i)\;{#1}}
+\newcommand{\negisa}{\rm{(\neg_i)}}
+\newcommand{\pbc}[1]{(PBC)\;{#1}}
+\newcommand{\pbcsa}{\rm{(PBC)}}
+\newcommand{\bote}{(\bot_e)}
+\newcommand{\alle}{(\forall_e)}
+\newcommand{\alli}{(\forall_i)}
+\newcommand{\exie}[1]{(\exists_e)\;{#1}}
+\newcommand{\exii}{(\exists_i)}
+
+\begin{document}
+\bibliographystyle{alpha}
+\begin{center}
+  \Large {\bf Formalização da correção do algoritmo {\it mergesort}} \\
+  \large Primeira atividade no assistente de provas Coq \\
+  \normalsize \today \\
+  Prof. Flávio L. C. de Moura \\[1cm]
+    \large {\bf Prazo}: ?? de 2023 (? pontos).
+\end{center}
+
+\input{paa_2023_1_mergesort.tex}
+
+% Para gerar o relatório: 
+% 1.Em um terminal digite (no diretório que contém o arquivo Coq): coqdoc --latex --body-only -s -g paa_2023_1_mergesort.v 
+%  2. Em um terminal digite: pdflatex relatorio.tex 
+%  3. Abra o arquivo relatorio.pdf com o aplicativo de sua preferência.
+
+% \begin{thebibliography}{CLRS01}  
+% \bibitem[ARdM17]{ARdM2017}
+% M.~Ayala-Rinc\'on and F.L.C. de Moura.
+% \newblock{\em {Applied Logic for Computer Scientists
+% - computational deduction and formal proofs}}.
+% \newblock UTiCS, Springer, 2017.
+
+% \bibitem[CLRS09]{CoLeRiSt2009}
+% T.~H. Cormen, C.~E. Leiserson, R.~L. Rivest, and C.~Stein.
+% \newblock {\em {Introduction to Algorithms}}.
+% \newblock MIT Electrical Engineering and Computer Science Series. MIT press,
+%   third edition, 2009.
+% \end{thebibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
